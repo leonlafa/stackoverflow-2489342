@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, OnDestroy } from "@angular/core";
-import { UserService } from "./user.service";
 import { interval, Subject, Subscription } from "rxjs";
+import { UserService } from "./user.service";
 import { User } from "./user.interface";
 
 @Component({
@@ -10,14 +10,7 @@ import { User } from "./user.interface";
       {{ user$ | async | json }}
     </pre
     >
-  `,
-  styles: [
-    `
-      h1 {
-        font-family: Lato;
-      }
-    `
-  ]
+  `
 })
 export class UserComponent implements OnInit, OnDestroy {
   name: string;
